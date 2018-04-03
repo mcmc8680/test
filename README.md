@@ -26,9 +26,13 @@
 以下是結果示意圖：
 ![bonita page](3.png)
 
+註1：要刪除已匯入的Page，要確定是否有application使用它，若有則Page不會允許刪除操作。
+
 ## Liferay Page
 以上URL可以直接用HTML的iframe語法嵌入網頁，只要使用者有登入bonita即可。
-如果想寫進Liferay的Primeface頁面，可以參考下面寫法：
+如果想寫進Liferay的Primeface頁面，在公司Github有Call-Center的Liferay專案中，
+有f_callin_bonita_message的分支Branch有寫範例檔。
+也可以參考下面寫法：
 
 .xhtml
 <pre><code>
@@ -103,3 +107,7 @@ public class ProcessMessageView implements Serializable {
 }
 
 </code></pre>
+
+## Edit Bonita Page
+Page不符合需求想改動它，可以在Bonita的UI designer匯入page-testPage.zip。
+修改好後再匯出它，重覆上面的步驟。
